@@ -7,6 +7,21 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
+/**
+ * @OA\Schema()
+ *
+ * @OA\Property(
+ *   property="name",
+ *   type="string",
+ *   description="User name"
+ * )
+ *
+ * @OA\Property(
+ *   property="email",
+ *   type="email",
+ *   description="User email"
+ * )
+ */
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
